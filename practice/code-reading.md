@@ -15,6 +15,10 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+// The result of this code will be "1" displayed on the console
+// In that instance x works as a global variable
+// If function f1() is called the result will be "2" displayed on the console,
+// as x will work as a local variable (inside the f1() function).
 
 ## Question 2
 
@@ -34,6 +38,14 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+// The output will be:
+// 10
+// undefined
+// f1() is called and displays on the console the value
+// of global variable x
+// y variable is 'called' by console.log(y) OUTSIDE the
+/ function and thus it's undefined
 
 ## Question 3
 
@@ -62,3 +74,12 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+// The output will be:
+// 9 (global variable x is 'called' on line 63)
+// from f1(x) the value of the LOCAL val becomes 10;
+// As we go out of the function f1 the val loses its value (it's undefined)
+// With line 65 y becomes an object with a key x with value of 9
+// Function f2 with y as an argument returns { x: 10 };
+// but y is still { x: 9 } ???????
+// TOTALLY CONFUSED

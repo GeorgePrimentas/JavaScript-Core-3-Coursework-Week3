@@ -70,3 +70,24 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+// The following worked but there is no destructuring:
+// hogwarts.forEach(person =>{
+//   if (person.house === "Gryffindor") {
+//     console.log(person.firstName + " " + person.lastName);
+//   }
+// })
+
+hogwarts.forEach(person =>{
+  if (person.house === "Gryffindor") {
+    let {firstName, lastName} = person;
+    console.log(firstName + " " + lastName);
+  }
+})
+
+hogwarts.forEach(person =>{
+  if (person.occupation === "Teacher" && person.pet !== null) {
+    let {firstName, lastName} = person;
+    console.log(firstName + " " + lastName);
+  }
+})
